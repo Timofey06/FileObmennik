@@ -1,0 +1,15 @@
+﻿@model File
+<h1>Add File</h1>
+<form method="post" asp-action="AddPost" enctype="multipart/form-data">
+    <p>
+        <label class="text-light" asp-for="FileName"></label>
+        <input type="file" name="files" class="form-control" id="uploadedImage" multiple />
+        
+    </p>
+    <p>
+        <input type="submit" class="btn btn-success" onclick="input()" value="Create" />
+        <a class="btn btn-primary" asp-controller="Home" asp-action="Index"> Back </a>
+    </p>
+   
+</form>
+

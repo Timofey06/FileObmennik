@@ -1,0 +1,70 @@
+﻿@model IEnumerable<File>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+
+<div class="container " >
+    <div>
+        <button class="btn filter-button text-light border-light border-1" data-filter="all">all</button>
+        @{
+            List<string> a = new List<string>();
+            foreach (var item in Model)
+            {
+                if (!a.Contains(item.FileType))
+                {
+                    a.Add(item.FileType);
+                }
+            }
+        }
+        @foreach (var item in a)
+        {
+            <button class="btn filter-button text-light border-light border-1" data-filter="@item.Replace('.','_')">@item</button>
+        }
+    </div>
+    <div>
+        @foreach (var item in Model)
+        {
+            <partial name="_FileCard" model="item" />
+        }
+    </div>
+
+    <div>
+
+        <a class="btn btn-primary" asp-action="Add" asp-controller="Home">Add file</a>
+
+    </div>
+
+</div>
+
+
+    
+
+
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            
+
+            $('.filter-button').click(function () {
+               
+                var value = $(this).attr('data-filter');
+                
+                if (value == "all") {
+                    $('.filter').show('1000');
+        
+        
+                }
+                else {
+                   
+                    $('.filter').not('.' + value).hide('1000');
+                    $('.filter').filter('.' + value).show('1000');
+                }
+            });
+        });
+
+    </script>
+    
+}

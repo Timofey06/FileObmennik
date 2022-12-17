@@ -1,0 +1,91 @@
+h1{
+    color:red;
+}
+input[type="number"] {
+    width: 200px;
+    color: white;
+    background-color: lightblue;
+    border-radius: 15px;
+}
+input[type="number"]:focus {
+    width: 200px;
+    color: white;
+    background-color: darkcyan;
+    border-radius: 15px;
+    
+}
+input[type="password"] {
+    width: 200px;
+    color: white;
+    background-color: lightblue;
+    border-radius: 15px;
+}
+
+input[type="password"]:focus {
+    width: 200px;
+    color: white;
+    background-color: darkcyan;
+    border-radius: 15px;
+}
+input[type="text"] {
+    width: 200px;
+    color: white;
+    background-color: lightblue;
+    border-radius: 15px;
+}
+
+input[type="text"]:focus {
+    width: 200px;
+    color: white;
+    background-color: darkcyan;
+    border-radius: 15px;
+}
+label{
+    color: white;
+    text-emphasis-color: white;
+}
+input[type="submit"] {
+    background-color: orange;
+    /*border: none;*/
+    color: white;
+    font-size: large;
+    border-radius: 15px;
+    /*margin: 20px;*/
+    /*padding: 20px*/
+}
+input[type="submit"]:hover {
+    background-color: green;
+    /*border: none;*/
+    color: white;
+    font-size: large;
+    border-radius: 15px;
+    /*margin: 20px;*/
+    /*padding: 20px*/
+}
+input[type="reset"] {
+    background-color: darkgray;
+    /*border: none;*/
+     color: white;
+    font-size: large;
+    border-radius: 15px;
+    /*margin: 20px;*/
+    /*padding: 20px*/
+}
+input[type="reset"]:hover {
+    background-color: red;
+    /*border: none;*/
+    color: white;
+    font-size: large;
+    border-radius: 15px;
+    /*margin: 20px;*/
+    /*padding: 20px*/
+}
+form{
+    background-color:darkgrey;
+}
+body{
+    background-color:darkgray;
+}
+a:hover {
+    color: mediumpurple;
+}

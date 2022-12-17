@@ -1,0 +1,8 @@
+﻿@model File
+<div class="card filter @Model.FileType.Replace('.','_') bg-dark border-light border-1 card-body" style="width: 40rem; ; height: 100px" >
+    <h5 class="label text-light"> @Model.FileName</h5>
+    <p>
+        <a class="btn btn-danger" asp-controller="Home" asp-action="Delete" asp-route-Id="@Model.Id">Delete</a>
+        <a class="btn btn-primary" href="@PathManager.ImageProductPass@Model.FileName" download>Download</a>
+    </p>
+</div>
